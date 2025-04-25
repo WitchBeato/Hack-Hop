@@ -9,6 +9,7 @@ public class MovementScript : MonoBehaviour
     public float moveSpeed = 5f;
     [SerializeField] private SpriteRenderer renderer;
     private Vector2 movementInput;
+    [SerializeField] private IsgroundChecker isgroundChecker;
     private Rigidbody2D body2d;
     private bool isJumping = false;
 
@@ -34,12 +35,11 @@ public class MovementScript : MonoBehaviour
         {
             movementInput = Vector2.zero;
         }
-        Debug.Log(movementInput);
     }
 
     public void JumpPlayer(InputAction.CallbackContext context)
     {
-        if (context.performed) // opsiyonel: yere yakınsa
+        if (context.performed && isgroundChecker.isGround) // opsiyonel: yere yakınsa
         {
             body2d.velocity = new Vector2(body2d.velocity.x, JumpForce);
             isJumping = true;

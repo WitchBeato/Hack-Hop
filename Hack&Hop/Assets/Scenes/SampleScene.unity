@@ -737,7 +737,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d466a8cc8dcc2f2449fc6989be1ecf39, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -823,8 +823,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpForce: 3.4
-  moveSpeed: 2.5
+  moveSpeed: 1.71
   renderer: {fileID: 2138568096}
+  isgroundChecker: {fileID: 2046718715}
 --- !u!114 &1839043625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,8 +1021,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046718714}
-  - component: {fileID: 2046718716}
   - component: {fileID: 2046718715}
+  - component: {fileID: 2046718716}
   m_Layer: 0
   m_Name: GroundedChecker
   m_TagString: Untagged
@@ -1056,6 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e418f8dad5c2b64fa730e293015b779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unityEventList: {fileID: 0}
 --- !u!61 &2046718716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1085,10 +1087,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.43366557, y: -0.15206453}
+  m_Offset: {x: 0.43554294, y: -0.1426779}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1099,7 +1101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09512198, y: 0.065084755}
+  m_Size: {x: 0.19649816, y: 0.06132984}
   m_EdgeRadius: 0
 --- !u!1 &2064784852
 GameObject:
