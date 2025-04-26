@@ -20,12 +20,12 @@ public class AltarColliderManager : MonoBehaviour
     void Start()
     {
         altarManager = GetComponent<IAltarManager>();
+        
         realPlayer = GameObject.Find("MC");
         setInputActive(false);
     }
 void OnTriggerEnter2D(Collider2D collision)
 {
-    Debug.Log(realPlayer.name);
     if (collision.gameObject != realPlayer) return; // Sadece gerçek oyuncuya izin ver.
 
 

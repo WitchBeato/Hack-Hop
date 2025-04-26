@@ -10,7 +10,6 @@ public class MCAnimationManager : MonoBehaviour
     public Animator animator;
     void Start()
     {
-        animator.SetTrigger("Attack");
         unityEventList.playerAttacked.AddListener(AttackAnimation);
     }
     void FixedUpdate()
@@ -20,7 +19,6 @@ public class MCAnimationManager : MonoBehaviour
         animator.SetFloat("JumpVelocity",bodyVelocity.y);
     }
     void AttackAnimation(){
-                animator.SetTrigger("Attack");
     }
 
     internal void playWrenchJump()
