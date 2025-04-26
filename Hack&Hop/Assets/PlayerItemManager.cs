@@ -22,8 +22,8 @@ public class PlayerItemManager : MonoBehaviour
     }
     public void useItem(InputAction.CallbackContext callbackContext){
         if(!callbackContext.performed) return;
-        if(currentItem.UseItem.TryGetComponent<IUseItem>(out IUseItem useitem) 
-        &&callbackContext.performed){
+        if(currentItem.UseItem.TryGetComponent<IUseItem>(out IUseItem useitem) ){
+            Debug.Log("tetiklendi");
             useitem.use();
         }
     }

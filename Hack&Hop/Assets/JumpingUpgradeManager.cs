@@ -23,7 +23,7 @@ public class JumpingUpgradeManager : MonoBehaviour,IUseItem
     }
     public void use()
     {
-        GameObject player = GameObject.FindWithTag ("Player");
+        GameObject player = GameObject.Find("MC");
         if(player.TryGetComponent<MovementScript>(out MovementScript body2d) && isFirstTime){
             body2d.JumpAction(1f);
             isFirstTime = false;
