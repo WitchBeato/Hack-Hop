@@ -28,8 +28,8 @@ public class MovementScript : MonoBehaviour
         if (context.performed)
         {
             movementInput = context.ReadValue<Vector2>();
-            if(movementInput.x < 0) renderer.flipX = true;
-            else if(movementInput.x > 0) renderer.flipX = false;
+            if(movementInput.x < 0) transform.localScale = new Vector3(-1,1);
+            else if(movementInput.x > 0) transform.localScale = new Vector3(1,1);
         }
         else if (context.canceled)
         {
@@ -43,6 +43,13 @@ public class MovementScript : MonoBehaviour
         {
             body2d.velocity = new Vector2(body2d.velocity.x, JumpForce);
             isJumping = true;
+        }
+    }
+     public void playerAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed && TryGetComponent<PlayerAttack>(out PlayerAttack playerAttack)) // opsiyonel: yere yakınsa
+        {
+            playerAttack.Attack();
         }
     }
 }
