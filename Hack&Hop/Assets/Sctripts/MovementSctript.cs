@@ -41,7 +41,7 @@ public class MovementScript : MonoBehaviour
     {
         if (context.performed && isgroundChecker.isGround) // opsiyonel: yere yakınsa
         {
-            body2d.velocity = new Vector2(body2d.velocity.x, JumpForce);
+            JumpAction(1);
             isJumping = true;
         }
     }
@@ -51,5 +51,8 @@ public class MovementScript : MonoBehaviour
         {
             playerAttack.Attack();
         }
+    }
+    public void JumpAction(float multiplier){
+        body2d.velocity = new Vector2(body2d.velocity.x, JumpForce*multiplier);
     }
 }
