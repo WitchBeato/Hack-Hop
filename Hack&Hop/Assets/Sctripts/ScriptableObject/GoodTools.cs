@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "My Assets/Powerup")]
-public class NewBehaviourScript : ScriptableObject
+public class GoodTools : ScriptableObject
 {
     public String toolName;
     public Sprite sprite;
