@@ -6,4 +6,6 @@ using UnityEngine.Events;
 public class UnityEventList : MonoBehaviour
 {
     public UnityEvent playerGrounded;
+    public UnityEvent playerAttacked;
+    public UnityEvent playerGainUpgrade;
 }
