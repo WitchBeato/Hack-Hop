@@ -19,7 +19,6 @@ public class SaveDataManager : MonoBehaviour
     void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
-        loadmebro();
     }
 
     public GameObject player;
