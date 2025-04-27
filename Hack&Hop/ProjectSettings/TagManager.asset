@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Throwing
+  - AttackLocation
   layers:
   - Default
   - TransparentFX

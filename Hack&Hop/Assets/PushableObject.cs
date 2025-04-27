@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PushableObject : MonoBehaviour
+{
+    public float pushSpeed = 5f; // Örneğin 5 birim/sn
+    public bool IsMoving
+    {
+        get { return isMoving; }
+        set
+        {
+            isMoving = value;
+            Debug.Log(IsMoving);
+            if(isMoving) rb.bodyType = RigidbodyType2D.Dynamic;
+            else rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+    }
+
+    private bool isMoving;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        isMoving = false;
+        rb = GetComponent<Rigidbody2D>();
+        // Başlangıçta hareket etmiyor, setter bunu zaten ayarlıyor.
+    }
+
+    public void PushObject()
+    {
+        IsMoving = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<BombObject>(out BombObject component))
+        {
+            Debug.Log("değiyor");
+            component.removeMe();
+        }
+    }
+
+
+void FixedUpdate()
+{
+    if (IsMoving)
+    {
+        rb.velocity = new Vector2(-pushSpeed, 0f);
+    }
+}
+
+}
