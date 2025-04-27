@@ -8,4 +8,6 @@ public class UnityEventList : MonoBehaviour
     public UnityEvent playerGrounded;
     public UnityEvent playerAttacked;
     public UnityEvent playerGainUpgrade;
+    public UnityEvent playerSaveGame;
+    public UnityEvent playerDeath;
 }

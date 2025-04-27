@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class PlayerHealtManager : NPCHealtSystem
 {
     public float invulnerabilityDuration = 2f;
+    
+    [SerializeField]private UnityEventList unityEventList;
     [SerializeField]private TMP_Text text;
     [SerializeField]private Slider healtSlider;
     private bool isInvulnerable = false;
@@ -40,5 +42,10 @@ public class PlayerHealtManager : NPCHealtSystem
         yield return new WaitForSeconds(invulnerabilityDuration);
 
         isInvulnerable = false;
+    }
+    public override void NPCDeath()
+    {
+        unityEventList.playerDeath.Invoke();
+        base.NPCDeath();
     }
 }

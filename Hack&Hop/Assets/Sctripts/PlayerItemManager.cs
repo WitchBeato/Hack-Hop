@@ -29,6 +29,15 @@ public class PlayerItemManager : MonoBehaviour
             useitem.use();
         }
     }
+    public void Save(){
+        PlayerData data = GetComponent<PlayerData>();
+        data.isPhoneAvaible = isPhoneAvaible;
+        data.playerItem = PlayerItemList;
+    }
+    public void load(PlayerData data){
+        isPhoneAvaible = data.isPhoneAvaible;
+        PlayerItemList = data.playerItem;
+    }
     public void unlockPlayerItem(GoodTools item){
         for(int i = 0; i < PlayerItemList.Length; i++){
             if(PlayerItemList[i].goodTools == item) 
