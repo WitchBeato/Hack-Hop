@@ -1194,7 +1194,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e214104845a24c046a61615d28e4c1ce, type: 2}
     - target: {fileID: 5211975607526176678, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: PlayerItemList.Array.data[0].isAvaible
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5211975607526176678, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: PlayerItemList.Array.data[1].goodTools
@@ -1202,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1d28f620ac88f44479528f35a895ac29, type: 2}
     - target: {fileID: 5211975607526176678, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: PlayerItemList.Array.data[1].isAvaible
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5282874446783344597, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: m_LocalPosition.x

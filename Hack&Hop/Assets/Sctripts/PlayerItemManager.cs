@@ -29,7 +29,8 @@ public class PlayerItemManager : MonoBehaviour
         if(currentItemID < 0) currentItemID = PlayerItemList.Length-1;
         if(currentItemID >= PlayerItemList.Length) currentItemID = 0;
         currentItem = PlayerItemList[currentItemID];
-        setToolImage(currentItem.goodTools.sprite);
+        if(currentItem.isAvaible)setToolImage(currentItem.goodTools.sprite);
+        else setToolImage(null);
     }
     public void setToolImage(Sprite sprite){
     if (sprite == null) // Use '==' for comparison
