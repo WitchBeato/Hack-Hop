@@ -11,9 +11,7 @@ public class PushableObject : MonoBehaviour
         set
         {
             isMoving = value;
-            Debug.Log(IsMoving);
-            if(isMoving) rb.bodyType = RigidbodyType2D.Dynamic;
-            else rb.bodyType = RigidbodyType2D.Kinematic;
+            Debug.Log(value);
         }
     }
 
@@ -24,12 +22,14 @@ public class PushableObject : MonoBehaviour
     {
         isMoving = false;
         rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = rb.bodyType = RigidbodyType2D.Kinematic;
         // Başlangıçta hareket etmiyor, setter bunu zaten ayarlıyor.
     }
 
     public void PushObject()
     {
         IsMoving = true;
+        rb.bodyType = rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

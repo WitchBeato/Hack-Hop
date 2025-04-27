@@ -510,7 +510,7 @@ MonoBehaviour:
   m_AssetsPPU: 32
   m_RefResolutionX: 320
   m_RefResolutionY: 180
-  m_CropFrame: 0
+  m_CropFrame: 4
   m_GridSnapping: 0
   m_FilterMode: 0
   m_UpscaleRT: 0
@@ -1417,6 +1417,10 @@ PrefabInstance:
     - target: {fileID: 7196660823791897162, guid: 41a2fed4050bffe40893d625302bacde, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083390791180660926, guid: 41a2fed4050bffe40893d625302bacde, type: 3}
+      propertyPath: mesafe
+      value: 0.0002
       objectReference: {fileID: 0}
     - target: {fileID: 9083390791180660926, guid: 41a2fed4050bffe40893d625302bacde, type: 3}
       propertyPath: attackLocation
