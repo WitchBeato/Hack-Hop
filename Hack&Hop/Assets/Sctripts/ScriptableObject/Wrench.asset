@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af44c9f0914a804e8f1ac06d8db64e7, type: 3}
   m_Name: Wrench
   m_EditorClassIdentifier: 
+  ID: 2
   toolName: Wrench
   sprite: {fileID: 21300000, guid: af25b1328c1578d4db1b51136a40a200, type: 3}
   toolExplanation: it can jump you higher

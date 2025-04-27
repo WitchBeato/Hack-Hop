@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class AltarColliderManager : MonoBehaviour
 {
-    private IAltarManager altarManager;
+    public IAltarManager altarManager;
     private GameObject realPlayer;
     private GameObject fakePlayer;
     public GameObject getItemPlayer;
@@ -27,10 +27,11 @@ public class AltarColliderManager : MonoBehaviour
 void OnTriggerEnter2D(Collider2D collision)
 {
     if (collision.gameObject != realPlayer) return; // Sadece gerçek oyuncuya izin ver.
-
+    GetItem();
 
     realPlayer = collision.gameObject; // İlk kez çarpan oyuncuyu kaydet.
-
+    Debug.Log(altarManager);
+    altarManager.getItem();
     visualManager.setSpriteVisible(false);
 
     // Önce Collider'ı disable et
@@ -44,6 +45,9 @@ void OnTriggerEnter2D(Collider2D collision)
     
     visualManager.setTextVisible(true);
     setInputActive(true);
+}
+public virtual void GetItem(){
+
 }
 public void continuetoYourJourner(InputAction.CallbackContext callbackContext){
     if(callbackContext.performed){
