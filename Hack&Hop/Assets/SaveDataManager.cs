@@ -9,27 +9,28 @@ using UnityEngine.SceneManagement;
 
 public class SaveDataManager : MonoBehaviour
 {
-        private String sceneName;
+    private String sceneName;
     void Awake()
     {
         if(gameObject.scene.buildIndex == -1) Destroy(gameObject);
-        loadmebro();
+
         DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
+        loadmebro();
     }
 
     public GameObject player;
     private PlayerData saveplayer;
-    private Transform saveposition;
+    private Vector3 saveposition;
     public CinemachineVirtualCamera cinemachineVirtualCamera;
     public void YARRRAAA(){
         Debug.Log("save oldu");
         player.GetComponent<PlayerItemManager>().Save(); 
         saveplayer = player.GetComponent<PlayerData>(); 
-        saveposition = player.transform;
+        saveposition = player.transform.position;
         sceneName = SceneManager.GetActiveScene().name;
         Debug.Log(player.transform.position);
     }
@@ -37,17 +38,16 @@ public void loadmebro(){
     Debug.Log("load oldu");
 
     player = GameObject.Find("MC");
-
-    if(saveposition == null) {
-        Debug.LogWarning("No saved position found yet.");
-        return;
-    }
+    PlayerHealtManager healtManager = player.GetComponent<PlayerHealtManager>();
+    healtManager.setHP(healtManager.maxHP);
+    healtManager.IsDeath = true;
 
     Debug.Log("burası loadlandı");
     player.GetComponent<PlayerItemManager>().load(saveplayer);
-    player.transform.position = saveposition.position;
+    player.transform.position = saveposition;
 }
     public void reloadScene(){
-        SceneManager.LoadScene(sceneName);
+        loadmebro();
     }
+    
 }
