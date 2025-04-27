@@ -6,7 +6,7 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
 {
     public float maxHP;
     public float CurrentHP;
-    public float damageRedTime = 0.1f;
+    public float damageRedTime = 0.3f;
     public bool IsDeath{
     get 
     {return isDeath;}
@@ -25,6 +25,7 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
     {
         CurrentHP -= value;
         if(CurrentHP <= 0) setHP(0);
+        else setHP(CurrentHP);
         StartCoroutine(takeDamageChange());
         isDeath = true;
     }

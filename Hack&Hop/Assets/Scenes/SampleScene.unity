@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 200
   CurrentHP: 150
-  damageRedTime: 0.2
+  damageRedTime: 0.5
   spriteRenderer: {fileID: 831953372}
   invulnerabilityDuration: 0.8
   text: {fileID: 1348148179}

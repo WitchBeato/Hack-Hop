@@ -10,7 +10,6 @@ public class ThornDamageManager : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<PlayerHealtManager>(out PlayerHealtManager healtManager)){
         Rigidbody2D rigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
-        Debug.Log(Vector2.up * thornForce);
         float recentHP = healtManager.CurrentHP;
         healtManager.getAttack(20f);
         float currentHP = healtManager.CurrentHP;

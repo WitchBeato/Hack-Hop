@@ -19,28 +19,26 @@ public class PlayerHealtManager : NPCHealtSystem
         text.SetText(((int)CurrentHP).ToString());
     }
     public override void setHP(float value){
-        healtSlider.value = value;
-        text.SetText(((int)value).ToString());
         base.setHP(value);
+        healtSlider.value = value;
+        Debug.Log("can: "+ value);
+        text.SetText(((int)value).ToString());
     }
     public override void getAttack(float value){
         if(isInvulnerable) return;
         base.getAttack(value);
-        Debug.Log(value);
         StartCoroutine(StartInvulnerability());
     }
     public override void setMaxHP(float value){
-        healtSlider.maxValue = value;
         base.setMaxHP(value);
+        healtSlider.maxValue = value;
     }
         private IEnumerator StartInvulnerability()
     {
         isInvulnerable = true;
-        Debug.Log("Dokunulmazlık başladı!");
 
         yield return new WaitForSeconds(invulnerabilityDuration);
 
         isInvulnerable = false;
-        Debug.Log("Dokunulmazlık bitti!");
     }
 }
