@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4906468164852562176}
   - component: {fileID: 5184260314356584850}
   - component: {fileID: 8666821409234438335}
+  - component: {fileID: 3624049600174643703}
   m_Layer: 0
   m_Name: Broken_Phone_Throwing
   m_TagString: Untagged
@@ -172,3 +173,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneBoom: {fileID: 1546473822892626600, guid: a938dab2fbbeb844482d9c4dd7c8ca7b, type: 3}
+--- !u!114 &3624049600174643703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404238567692988651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238aed9bf8cfc2e4592d60a1ef448973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCHealtSystem : MonoBehaviour, INPCHealt
+public class NPCHealtSystem : MonoBehaviour, INPCHealt,INPCDeath
 {
     public float maxHP;
     public float CurrentHP;
@@ -24,7 +24,10 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
     public virtual void getAttack(float value)
     {
         CurrentHP -= value;
-        if(CurrentHP <= 0) setHP(0);
+        if(CurrentHP <= 0) {
+            setHP(0);
+            NPCDeath();
+            }
         else setHP(CurrentHP);
         StartCoroutine(takeDamageChange());
         isDeath = true;
@@ -53,5 +56,10 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
         spriteRenderer.color = originalColor;
 
         // Geri kalan invulnerability süresini bekle
+    }
+
+    public virtual void NPCDeath()
+    {
+        
     }
 }
