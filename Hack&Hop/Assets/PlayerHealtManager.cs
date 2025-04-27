@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealtManager : NPCHealtSystem
 {
-    public float invulnerabilityDuration;
+    public float invulnerabilityDuration = 2f;
     [SerializeField]private TMP_Text text;
     [SerializeField]private Slider healtSlider;
     private bool isInvulnerable = false;
@@ -26,6 +26,7 @@ public class PlayerHealtManager : NPCHealtSystem
     public override void getAttack(float value){
         if(isInvulnerable) return;
         base.getAttack(value);
+        Debug.Log(value);
         StartCoroutine(StartInvulnerability());
     }
     public override void setMaxHP(float value){

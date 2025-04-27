@@ -6,6 +6,7 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
 {
     public float maxHP;
     public float CurrentHP;
+    public float damageRedTime = 0.1f;
     public bool IsDeath{
     get 
     {return isDeath;}
@@ -13,10 +14,18 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
         isDeath = value;
     }}
     private bool isDeath = false;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    void Start()
+    {
+        if(gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer)){
+            this.spriteRenderer = spriteRenderer;
+        }
+    }
     public virtual void getAttack(float value)
     {
         CurrentHP -= value;
         if(CurrentHP <= 0) setHP(0);
+        StartCoroutine(takeDamageChange());
         isDeath = true;
     }
 
@@ -28,5 +37,20 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt
     public virtual void setMaxHP(float value)
     {
         maxHP = value;
+    }
+    private IEnumerator takeDamageChange()
+    {
+        Color originalColor = spriteRenderer.color;
+
+        // Rengi kırmızı yap
+        spriteRenderer.color = Color.red;
+
+        // 0.2 saniye bekle
+        yield return new WaitForSeconds(damageRedTime);
+
+        // Eski rengine geri dön
+        spriteRenderer.color = originalColor;
+
+        // Geri kalan invulnerability süresini bekle
     }
 }

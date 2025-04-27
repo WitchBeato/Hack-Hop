@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public float phoneVelocity = 2f;
+    public float Damage = 10f;
     [SerializeField] private UnityEventList unityEventList;
     [SerializeField] private GameObject attackItem;
     [SerializeField] private GameObject attackLocation;
