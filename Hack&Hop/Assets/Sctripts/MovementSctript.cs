@@ -62,7 +62,6 @@ public class MovementScript : MonoBehaviour
     }
     public void JumpAction(float multiplier){
         body2d.velocity = new Vector2(body2d.velocity.x, JumpForce*multiplier);
-        Debug.Log("zıpladı");
         lockXScale();
     }
     private void lockXScale(){

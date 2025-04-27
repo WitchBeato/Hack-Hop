@@ -8,6 +8,7 @@ public class JumpingUpgradeManager : MonoBehaviour,IUseItem
 
     private UnityEventList unityEventList;
     private MCAnimationManager mcAnimationManager;
+    public float jumpForce = 1f;
     [SerializeField] private  GameObject buharLocation;
     [SerializeField] private  GameObject buhar;
     private Boolean isFirstTime = true;
@@ -25,7 +26,7 @@ public class JumpingUpgradeManager : MonoBehaviour,IUseItem
     {
         GameObject player = GameObject.Find("MC");
         if(player.TryGetComponent<MovementScript>(out MovementScript body2d) && isFirstTime){
-            body2d.JumpAction(1f);
+            body2d.JumpAction(jumpForce);
             isFirstTime = false;
             mcAnimationManager.playWrenchJump();
             createBuhar();
