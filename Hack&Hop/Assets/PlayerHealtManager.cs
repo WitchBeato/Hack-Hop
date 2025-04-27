@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerHealtManager : NPCHealtSystem
 {
     public float invulnerabilityDuration = 2f;
+    public AudioClip deathFX;
     
     [SerializeField]private UnityEventList unityEventList;
     [SerializeField]private TMP_Text text;
@@ -46,6 +47,7 @@ public class PlayerHealtManager : NPCHealtSystem
     public override void NPCDeath()
     {
         unityEventList.playerDeath.Invoke();
+                    SoundfxManager.instance.PlaySoundFX(deathFX,transform);
         base.NPCDeath();
     }
 }

@@ -8,6 +8,7 @@ public class MovementScript : MonoBehaviour
 {
     public float JumpForce = 7f;
     public float moveSpeed = 5f;
+    public AudioClip playerJumpFX;
     [SerializeField] private SpriteRenderer renderer;
     
     [SerializeField] private UnityEventList unityEventList;
@@ -17,7 +18,6 @@ public class MovementScript : MonoBehaviour
     private Quaternion lockedX;
 
     private Rigidbody2D body2d;
-    private bool isJumping = false;
 
     void Start()
     {
@@ -50,7 +50,6 @@ public class MovementScript : MonoBehaviour
         if (context.performed && isgroundChecker.isGround) // opsiyonel: yere yakınsa
         {
             JumpAction(1);
-            isJumping = true;
         }
     }
      public void playerAttack(InputAction.CallbackContext context)
@@ -62,6 +61,7 @@ public class MovementScript : MonoBehaviour
     }
     public void JumpAction(float multiplier){
         body2d.velocity = new Vector2(body2d.velocity.x, JumpForce*multiplier);
+        SoundfxManager.instance.PlaySoundFX(playerJumpFX,transform);
         lockXScale();
     }
     private void lockXScale(){

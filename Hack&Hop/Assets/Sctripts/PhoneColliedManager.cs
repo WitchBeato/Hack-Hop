@@ -5,6 +5,7 @@ using UnityEngine;
 public class PhoneColliedManager : MonoBehaviour
 {
     private PlayerThrowManager playerThrowManager;
+    public AudioClip boomFX;
     void Start()
     {
         playerThrowManager = GetComponent<PlayerThrowManager>();
@@ -17,6 +18,7 @@ public class PhoneColliedManager : MonoBehaviour
         }
         if(collision.gameObject.TryGetComponent<EnemyHealtManager>(out EnemyHealtManager manager)){
             manager.getAttack(playerThrowManager.Damage);
+            SoundfxManager.instance.PlaySoundFX(boomFX,transform);
         }
         Instantiate(phoneBoom, transform.position, Quaternion.identity);
         Destroy(gameObject);

@@ -36,7 +36,7 @@ public class EnemyGiveDamage : MonoBehaviour
 
             // Apply force in the opposite direction
 
-            body2D.AddForce(new Vector2(forceX,forceY), ForceMode2D.Impulse);
+            body2D.AddForce(new Vector2(-forceX,forceY), ForceMode2D.Impulse);
         }
     }
 }

@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public float phoneVelocity = 2f;
     public float Damage = 10f;
+    public AudioClip attackClip;
     [SerializeField] private UnityEventList unityEventList;
     [SerializeField] private GameObject attackItem;
     [SerializeField] private GameObject attackLocation;
@@ -22,6 +23,7 @@ public class PlayerAttack : MonoBehaviour
             int val = 1;
             if(transform.localRotation.eulerAngles.y == 180) val = -1;
             rigidbody.AddForce(new Vector2(val*phoneVelocity,0));
+            SoundfxManager.instance.PlaySoundFX(attackClip,transform);
         }
         unityEventList.playerAttacked.Invoke();
 

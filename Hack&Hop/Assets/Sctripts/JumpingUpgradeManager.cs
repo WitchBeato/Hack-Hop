@@ -9,6 +9,7 @@ public class JumpingUpgradeManager : MonoBehaviour,IUseItem
     private UnityEventList unityEventList;
     private MCAnimationManager mcAnimationManager;
     public float jumpForce = 1f;
+    public AudioClip jumpHighFX;
     [SerializeField] private  GameObject buharLocation;
     [SerializeField] private  GameObject buhar;
     private Boolean isFirstTime = true;
@@ -30,9 +31,11 @@ public class JumpingUpgradeManager : MonoBehaviour,IUseItem
             isFirstTime = false;
             mcAnimationManager.playWrenchJump();
             createBuhar();
+            SoundfxManager.instance.PlaySoundFX(jumpHighFX,transform);
         }
     }
     private void createBuhar(){
         Instantiate(buhar,buharLocation.transform.position,Quaternion.identity);
     }
+    
 }
