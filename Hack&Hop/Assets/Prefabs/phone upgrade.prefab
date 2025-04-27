@@ -56,7 +56,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7843772568269358921, guid: 8fa7cfafc72ef204dbb78b0a1489ddc9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6902293080220676900, guid: 8fa7cfafc72ef204dbb78b0a1489ddc9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -64,6 +69,17 @@ PrefabInstance:
       insertIndex: 4
       addedObject: {fileID: -2020389070031933324}
   m_SourcePrefab: {fileID: 100100000, guid: 8fa7cfafc72ef204dbb78b0a1489ddc9, type: 3}
+--- !u!114 &472244434007082098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2964912440926806838, guid: 8fa7cfafc72ef204dbb78b0a1489ddc9, type: 3}
+  m_PrefabInstance: {fileID: 3434210119077979972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d57f6242488034db9e949f704d03b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8883845218335361841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6116171694062136437, guid: 8fa7cfafc72ef204dbb78b0a1489ddc9, type: 3}
@@ -81,3 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7eaa1a17c44d341a2032ccebd1c9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getItemPlayer: {fileID: 5431858714877180503, guid: f0d2c4ba3976ab649a8b73696e69bbcc, type: 3}
+  upgradeFX: {fileID: 8300000, guid: efbab9c3d4383564fb3ad78f24809e87, type: 3}
+  visualManager: {fileID: 472244434007082098}

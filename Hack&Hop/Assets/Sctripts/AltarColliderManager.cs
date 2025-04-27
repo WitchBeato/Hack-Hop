@@ -10,6 +10,7 @@ public class AltarColliderManager : MonoBehaviour
     private GameObject realPlayer;
     private GameObject fakePlayer;
     public GameObject getItemPlayer;
+    public AudioClip upgradeFX;
     public AltarVisualManager visualManager;
     private PlayerInput playerInput;
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ void OnTriggerEnter2D(Collider2D collision)
 {
     if (collision.gameObject != realPlayer) return; // Sadece gerçek oyuncuya izin ver.
     GetItem();
+    SoundfxManager.instance.PlaySoundFX(upgradeFX,transform);
 
     realPlayer = collision.gameObject; // İlk kez çarpan oyuncuyu kaydet.
     Debug.Log(altarManager);

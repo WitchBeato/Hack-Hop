@@ -150,6 +150,7 @@ MonoBehaviour:
   damageRedTime: 0.5
   spriteRenderer: {fileID: 831953372}
   invulnerabilityDuration: 0.8
+  deathFX: {fileID: 0}
   unityEventList: {fileID: 1170145739}
   text: {fileID: 1348148179}
   healtSlider: {fileID: 1552456769}
@@ -1589,6 +1590,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5756569063340632641, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
+      propertyPath: jumpHighFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 01ca9351d5a271e44b545fe014feeb0b, type: 3}
     - target: {fileID: 5859138592272702436, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: attackClip
       value: 
@@ -1629,6 +1634,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8970779416625457348, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
+      propertyPath: playerJumpFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ba456ed0c91d1f4887e294ad26e33d9, type: 3}
     - target: {fileID: 8970779416625457348, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: unityEventList
       value: 

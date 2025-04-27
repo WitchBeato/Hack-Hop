@@ -149,6 +149,7 @@ MonoBehaviour:
   CurrentHP: 50
   damageRedTime: 0.3
   spriteRenderer: {fileID: 4099780565688507390}
+  enemyDeathFX: {fileID: 8300000, guid: b904097e6e46b8f46be0634aa6dd2896, type: 3}
 --- !u!114 &8091895191002501627
 MonoBehaviour:
   m_ObjectHideFlags: 0
