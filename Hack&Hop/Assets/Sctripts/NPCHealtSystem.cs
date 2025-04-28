@@ -22,9 +22,6 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt,INPCDeath
             this.spriteRenderer = spriteRenderer;
             originalColor = spriteRenderer.color;
         }
-        if(spriteRenderer != null){
-            originalColor = this.spriteRenderer.color;
-        }
     }
     public virtual void getAttack(float value)
     {

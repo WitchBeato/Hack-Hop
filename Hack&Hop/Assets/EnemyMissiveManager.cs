@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMissiveManager : MonoBehaviour
@@ -17,7 +18,6 @@ public class EnemyMissiveManager : MonoBehaviour
         
         rb = GetComponent<Rigidbody2D>();
         
-        // Optional: Auto-destroy after some time in case it never hits anything
         Destroy(gameObject, 5f); // Destroy after 5 seconds
     }
 
@@ -26,6 +26,7 @@ public class EnemyMissiveManager : MonoBehaviour
         // Check for player health manager
         if(collision.gameObject.TryGetComponent<PlayerHealtManager>(out PlayerHealtManager manager)) {
             GetDamage(manager);
+            Destroy(gameObject);
 
         }
         
@@ -33,14 +34,17 @@ public class EnemyMissiveManager : MonoBehaviour
         if(bombEffect != null) {
             Instantiate(bombEffect, transform.position, Quaternion.identity);
         }
-                    Debug.Log("patladım");
         // Destroy the missile
-        Destroy(gameObject);
+        DestroyMe(collision.transform);
+
     }
 
     public virtual void GetDamage(PlayerHealtManager playerHealtManager)
     {
         playerHealtManager.getAttack(damage);
+    }
+    public virtual void DestroyMe(Transform collisiontransform){
+        Destroy(gameObject);
     }
 
     void FixedUpdate()

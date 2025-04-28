@@ -53,6 +53,5 @@ public class PlayerHealtManager : NPCHealtSystem
         base.NPCDeath();
     }
     public void yazdostum(){
-        Debug.Log("YARRA");
     }
 }

@@ -26,7 +26,6 @@ public class SaveDataManager : MonoBehaviour
     private Vector3 saveposition;
     public CinemachineVirtualCamera cinemachineVirtualCamera;
     public void YARRRAAA(){
-        Debug.Log("save oldu");
         player.GetComponent<PlayerItemManager>().Save(); 
         saveplayer = player.GetComponent<PlayerData>(); 
         saveposition = player.transform.position;
@@ -34,14 +33,12 @@ public class SaveDataManager : MonoBehaviour
         Debug.Log(player.transform.position);
     }
 public void loadmebro(){
-    Debug.Log("load oldu");
 
     player = GameObject.Find("MC");
     PlayerHealtManager healtManager = player.GetComponent<PlayerHealtManager>();
     healtManager.setHP(healtManager.maxHP);
     healtManager.IsDeath = true;
 
-    Debug.Log("burası loadlandı");
     player.GetComponent<PlayerItemManager>().load(saveplayer);
     player.transform.position = saveposition;
 }
