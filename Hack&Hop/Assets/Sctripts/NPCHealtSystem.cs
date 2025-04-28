@@ -14,11 +14,13 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt,INPCDeath
         isDeath = value;
     }}
     private bool isDeath = false;
+    private Color originalColor;
     [SerializeField] private SpriteRenderer spriteRenderer;
     void Start()
     {
         if(gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer)){
             this.spriteRenderer = spriteRenderer;
+            originalColor = spriteRenderer.color;
         }
     }
     public virtual void getAttack(float value)
@@ -44,7 +46,6 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt,INPCDeath
     }
     private IEnumerator takeDamageChange()
     {
-        Color originalColor = spriteRenderer.color;
 
         // Rengi kırmızı yap
         spriteRenderer.color = Color.red;

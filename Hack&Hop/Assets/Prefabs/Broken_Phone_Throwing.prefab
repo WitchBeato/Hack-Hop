@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d413de853d7b4d64b87fa24c7141ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boomFX: {fileID: 8300000, guid: 9806a4015412b134c82dad3bc74ada75, type: 3}
   phoneBoom: {fileID: 1546473822892626600, guid: a938dab2fbbeb844482d9c4dd7c8ca7b, type: 3}
 --- !u!114 &3624049600174643703
 MonoBehaviour:

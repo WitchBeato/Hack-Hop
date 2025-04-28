@@ -20,6 +20,7 @@ public class PlayerHealtManager : NPCHealtSystem
         healtSlider.maxValue = maxHP;
         healtSlider.value = CurrentHP;
         text.SetText(((int)CurrentHP).ToString());
+        UnityEventList.instance.playerSaveGame.AddListener(yazdostum);
     }
     public override void setHP(float value){
         base.setHP(value);
@@ -49,5 +50,8 @@ public class PlayerHealtManager : NPCHealtSystem
         unityEventList.playerDeath.Invoke();
                     SoundfxManager.instance.PlaySoundFX(deathFX,transform);
         base.NPCDeath();
+    }
+    public void yazdostum(){
+        Debug.Log("YARRA");
     }
 }
