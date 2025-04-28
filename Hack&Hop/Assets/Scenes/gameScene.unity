@@ -148,7 +148,6 @@ MonoBehaviour:
   maxHP: 200
   CurrentHP: 10
   damageRedTime: 0.5
-  originalColor: {r: 1, g: 1, b: 1, a: 0}
   spriteRenderer: {fileID: 831953372}
   invulnerabilityDuration: 0.8
   deathFX: {fileID: 8300000, guid: b904097e6e46b8f46be0634aa6dd2896, type: 3}
@@ -1315,52 +1314,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7196660823791897162, guid: 41a2fed4050bffe40893d625302bacde, type: 3}
   m_PrefabInstance: {fileID: 5530165058852702993}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1987821343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1987821345}
-  - component: {fileID: 1987821344}
-  m_Layer: 0
-  m_Name: enemySpawnManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1987821344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987821343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f9c69babdf5744783d0765cf44390b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyprefab: {fileID: 72117454278452711, guid: 7d01df4b96c329e4491e459ab8149dc3, type: 3}
-  enemy: {fileID: 0}
---- !u!4 &1987821345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987821343}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0.58, z: 0.06964542}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2049590866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1649,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1d28f620ac88f44479528f35a895ac29, type: 2}
     - target: {fileID: 5211975607526176678, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: PlayerItemList.Array.data[1].isAvaible
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282874446783344597, guid: cc52e5ec872d2754781f99825d22b36a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2071,6 +2024,5 @@ SceneRoots:
   - {fileID: 6681615585058505510}
   - {fileID: 7502210607062213018}
   - {fileID: 861174261}
-  - {fileID: 1987821345}
   - {fileID: 744281279}
   - {fileID: 1097953286}

@@ -22,9 +22,11 @@ public class PushUpgradeManager : MonoBehaviour, IUseItem
         int val = 1;
         if(playerloc.localRotation.eulerAngles.y == 180) val = -1;
         RaycastHit2D hit = Physics2D.Raycast(attackLocation.transform.position,Vector2.right*val,mesafe);
+        mcAnimationManager.playMagnetAnim();
         if(hit.collider.gameObject.TryGetComponent<PushableObject>(out PushableObject component)){
             SoundfxManager.instance.PlaySoundFX(useFX,transform);
             component.PushObject();
+
         }
     }
 }

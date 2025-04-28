@@ -29,4 +29,8 @@ public class MCAnimationManager : MonoBehaviour
     {
         animator.SetBool("WrenchJump",false);
     }
+    public void playMagnetAnim()
+    {
+        animator.SetTrigger("useMagnet");
+    }
 }
