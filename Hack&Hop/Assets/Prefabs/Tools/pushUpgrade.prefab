@@ -45,3 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesafe: 4
+  useFX: {fileID: 8300000, guid: 541d6fda8aeefed499c0964add0c404f, type: 3}
+  attackLocation: {fileID: 0}
