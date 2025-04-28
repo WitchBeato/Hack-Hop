@@ -6,6 +6,7 @@ public class PushUpgradeManager : MonoBehaviour, IUseItem
 {
     public float mesafe = 0.5f;
     public AudioClip useFX;
+    private MCAnimationManager mcAnimationManager;
     [SerializeField]private GameObject attackLocation;
     void Awake()
     {
@@ -13,7 +14,7 @@ public class PushUpgradeManager : MonoBehaviour, IUseItem
     }
     void Start()
     {
-        Debug.Log(attackLocation.name);
+        mcAnimationManager = FindObjectOfType<MCAnimationManager>();
     }
     public void use()
     {
