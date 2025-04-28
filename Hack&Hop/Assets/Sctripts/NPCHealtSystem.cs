@@ -14,13 +14,16 @@ public class NPCHealtSystem : MonoBehaviour, INPCHealt,INPCDeath
         isDeath = value;
     }}
     private bool isDeath = false;
-    private Color originalColor;
+    private Color originalColor = Color.white;
     [SerializeField] private SpriteRenderer spriteRenderer;
     void Start()
     {
         if(gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer)){
             this.spriteRenderer = spriteRenderer;
             originalColor = spriteRenderer.color;
+        }
+        if(spriteRenderer != null){
+            originalColor = this.spriteRenderer.color;
         }
     }
     public virtual void getAttack(float value)

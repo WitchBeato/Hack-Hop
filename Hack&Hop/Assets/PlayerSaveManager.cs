@@ -9,7 +9,7 @@ public class PlayerSaveManager : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<PlayerEnterSave>(out PlayerEnterSave component)){
             component.enter();
-                        SoundfxManager.instance.PlaySoundFX(saveFX,transform);
+            SoundfxManager.instance.PlaySoundFX(saveFX,transform);
         }
     }
 
