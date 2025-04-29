@@ -57,7 +57,7 @@ public class KnockbackManager : MonoBehaviour
         // Play hit sound if available
         if (hitSoundFX != null && SoundfxManager.instance != null)
         {
-            SoundfxManager.instance.PlaySoundFX(hitSoundFX, transform);
+            SoundfxManager.instance.PlaySoundFX(hitSoundFX, transform,40f);
         }
         
         // Spawn hit effect if available
