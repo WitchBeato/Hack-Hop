@@ -18,6 +18,7 @@ public class MovementScript : MonoBehaviour
     private Quaternion lockedX;
 
     private Rigidbody2D body2d;
+    private bool jumpQueued;
 
     void Start()
     {
@@ -27,7 +28,13 @@ public class MovementScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        body2d.velocity = new Vector2(movementInput.x * moveSpeed, body2d.velocity.y);
+    body2d.velocity = new Vector2(movementInput.x * moveSpeed, body2d.velocity.y);
+    
+    if (jumpQueued)
+    {
+        JumpAction(1);
+        jumpQueued = false;
+    }
     }
 
     public void MovePlayer(InputAction.CallbackContext context)
@@ -35,23 +42,29 @@ public class MovementScript : MonoBehaviour
         if (context.performed)
         {
             movementInput = context.ReadValue<Vector2>();
-            if(movementInput.x < 0) transform.localRotation = Quaternion.Euler(new Vector3(0,180,0));
-            else if(movementInput.x > 0) transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
+            if(movementInput.x < 0) {
+                transform.localRotation = Quaternion.Euler(new Vector3(0,180,0));
+                                Debug.Log("karakter döndü");}
+            else if(movementInput.x > 0) {
+                transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
+                Debug.Log("karakter döndü");
+                }
+
 
         }
         else if (context.canceled)
         {
-            movementInput = Vector2.zero;
+            movementInput = new Vector2(0,body2d.velocity.y);
         }
     }
 
-    public void JumpPlayer(InputAction.CallbackContext context)
+public void JumpPlayer(InputAction.CallbackContext context)
+{
+    if (context.performed && isgroundChecker.isGround)
     {
-        if (context.performed && isgroundChecker.isGround) // opsiyonel: yere yakınsa
-        {
-            JumpAction(1);
-        }
+        jumpQueued = true;
     }
+}
      public void playerAttack(InputAction.CallbackContext context)
     {
         if (context.performed && TryGetComponent<PlayerAttack>(out PlayerAttack playerAttack)) // opsiyonel: yere yakınsa
@@ -70,7 +83,6 @@ public class MovementScript : MonoBehaviour
     }
     private void unlockXScale(){
         isScaleLocked = false;
-        body2d.velocity = Vector2.zero;
     }
     private void LateUpdate()
     {
