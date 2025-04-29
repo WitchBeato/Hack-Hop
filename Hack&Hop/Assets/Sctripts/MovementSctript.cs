@@ -23,7 +23,6 @@ public class MovementScript : MonoBehaviour
     void Start()
     {
         body2d = GetComponent<Rigidbody2D>();
-        unityEventList.playerGrounded.AddListener(unlockXScale);
     }
 
     void FixedUpdate()
@@ -32,8 +31,8 @@ public class MovementScript : MonoBehaviour
     
     if (jumpQueued)
     {
-        JumpAction(1);
         jumpQueued = false;
+        JumpAction(1);
     }
     }
 
@@ -42,12 +41,13 @@ public class MovementScript : MonoBehaviour
         if (context.performed)
         {
             movementInput = context.ReadValue<Vector2>();
+            if(!isgroundChecker.isGround) return;
+
             if(movementInput.x < 0) {
                 transform.localRotation = Quaternion.Euler(new Vector3(0,180,0));
-                                Debug.Log("karakter döndü");}
+                }
             else if(movementInput.x > 0) {
                 transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
-                Debug.Log("karakter döndü");
                 }
 
 
@@ -75,21 +75,5 @@ public void JumpPlayer(InputAction.CallbackContext context)
     public void JumpAction(float multiplier){
         body2d.velocity = new Vector2(body2d.velocity.x, JumpForce*multiplier);
         SoundfxManager.instance.PlaySoundFX(playerJumpFX,transform);
-        lockXScale();
-    }
-    private void lockXScale(){
-        isScaleLocked = true;
-        lockedX = transform.localRotation;
-    }
-    private void unlockXScale(){
-        isScaleLocked = false;
-    }
-    private void LateUpdate()
-    {
-        if(isScaleLocked) transform.localRotation = lockedX;
-        else{
-            if(body2d.velocity.x < 0) transform.localRotation = Quaternion.Euler(new Vector3(0,180,0));
-            else if(body2d.velocity.x > 0) transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
-        }
     }
 }
