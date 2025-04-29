@@ -52,10 +52,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magnet Giver Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6516507403592886997, guid: 159d97480ee4172498d6dd4d029078c0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516507403592886997, guid: 159d97480ee4172498d6dd4d029078c0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -559060585
+      objectReference: {fileID: 0}
     - target: {fileID: 7391625735701736422, guid: 159d97480ee4172498d6dd4d029078c0, type: 3}
       propertyPath: powerUpTool
       value: 
       objectReference: {fileID: 11400000, guid: 1d28f620ac88f44479528f35a895ac29, type: 2}
+    - target: {fileID: 7817978341527626945, guid: 159d97480ee4172498d6dd4d029078c0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817978341527626945, guid: 159d97480ee4172498d6dd4d029078c0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -559060585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
