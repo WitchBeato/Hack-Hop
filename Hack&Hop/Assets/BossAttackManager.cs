@@ -24,9 +24,11 @@ public class BossAttackManager : MonoBehaviour
     }
     public void AttackWhip(){
         BossAnimationManager.instance.playWhipAnimation();
-        BossAnimationManager.instance.waitForAnimation();
-        Instantiate(whipAttack,whipAttackLocation.position,Quaternion.identity);
 
+
+    }
+    public  void AttackWhipContiune(){
+        Instantiate(whipAttack,whipAttackLocation.position,Quaternion.identity);
     }
   
 }

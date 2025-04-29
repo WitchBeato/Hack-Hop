@@ -72,8 +72,33 @@ PrefabInstance:
       propertyPath: missiveSpeed
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9195145820494662985, guid: d04ff8e904c57c44e82d5aa5b8cd50f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8842428888263319921, guid: d04ff8e904c57c44e82d5aa5b8cd50f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6982215535906925029}
   m_SourcePrefab: {fileID: 100100000, guid: d04ff8e904c57c44e82d5aa5b8cd50f4, type: 3}
+--- !u!1 &3889366913142654653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8842428888263319921, guid: d04ff8e904c57c44e82d5aa5b8cd50f4, type: 3}
+  m_PrefabInstance: {fileID: 5714875101616334796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6982215535906925029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889366913142654653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378e626a87209d942b3e92dc8bc75af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  missiveSpeed: 2.5
+  direction: -1
+  bombEffect: {fileID: 1546473822892626600, guid: a938dab2fbbeb844482d9c4dd7c8ca7b, type: 3}

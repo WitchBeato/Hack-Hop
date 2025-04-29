@@ -46,4 +46,9 @@ public class BossAnimationManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         
     }
+
+    internal void whipAnimationEnd()
+    {
+        throw new NotImplementedException();
+    }
 }

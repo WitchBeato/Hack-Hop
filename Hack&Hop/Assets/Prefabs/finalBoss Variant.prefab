@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3d7b384a103e64ea8804d07fef51be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 600
-  CurrentHP: 600
+  maxHP: 1200
+  CurrentHP: 1200
   damageRedTime: 0.2
   spriteRenderer: {fileID: 9045066099409970526}
   enemyDeathFX: {fileID: 8300000, guid: 0e3b63cb912681b4fa88429bb8869891, type: 3}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44cbc22baebd3e419c6d30106454d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackInterval: 2
+  attackInterval: 1.65
 --- !u!114 &2834356144393255065
 MonoBehaviour:
   m_ObjectHideFlags: 0
