@@ -49,11 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8421234891238142831, guid: d0d264b269a804a45929c1ce7c4c779f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.291
+      value: 103.36394
       objectReference: {fileID: 0}
     - target: {fileID: 8421234891238142831, guid: d0d264b269a804a45929c1ce7c4c779f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36555707
+      value: 0.20021439
       objectReference: {fileID: 0}
     - target: {fileID: 8421234891238142831, guid: d0d264b269a804a45929c1ce7c4c779f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -131,8 +131,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheckDistance: 0.2
-  wallCheckDistance: 0.5
-  playerDetectionRange: 0.87
+  wallCheckDistance: 0.73
+  playerDetectionRange: 1.78
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
