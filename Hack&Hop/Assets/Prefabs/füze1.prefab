@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2280447389476304627}
   - component: {fileID: 1465562807586618431}
   - component: {fileID: 9195145820494662985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "f\xFCze1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,4 +196,4 @@ MonoBehaviour:
   damage: 20
   missiveSpeed: 2
   direction: -1
-  bombEffect: {fileID: 8842428888263319921}
+  bombEffect: {fileID: 1546473822892626600, guid: a938dab2fbbeb844482d9c4dd7c8ca7b, type: 3}

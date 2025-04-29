@@ -26,4 +26,24 @@ public class BossAnimationManager : MonoBehaviour
             Debug.Log("this");
         }
     }
+
+    internal void playAttackRocket()
+    {
+                animator.SetTrigger("Rocket");
+    }
+    internal void playWhipAnimation()
+    {
+                animator.SetTrigger("Whip");
+    }
+    
+    public void waitForAnimation(){
+        StartCoroutine(MyDelayedFunction(giveLenght().Length));
+    }
+      IEnumerator MyDelayedFunction(float time)
+    {
+        
+        // 2 saniye bekle
+        yield return new WaitForSeconds(time);
+        
+    }
 }

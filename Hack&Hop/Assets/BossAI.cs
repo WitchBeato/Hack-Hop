@@ -61,7 +61,7 @@ public class BossAttackMissives : IBossAttack
     public void Attack()
     {
         Debug.Log("Launching missives attack!");
-        // Actual attack logic here
+        BossAttackManager.instance.AttackWhip();
     }
 }
 
@@ -70,7 +70,7 @@ public class BossAttackWhip : IBossAttack
     public void Attack()
     {
         Debug.Log("Whipping attack!");
-        // Actual attack logic here
+        BossAttackManager.instance.AttackRocket();
     }
 }
 
