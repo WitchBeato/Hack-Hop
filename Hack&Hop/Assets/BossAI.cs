@@ -27,6 +27,7 @@ public class BossAI : MonoBehaviour
     {
         while (true)
         {
+            Debug.Log("execute it");
             ExecuteRandomAttack();
             yield return new WaitForSeconds(attackInterval);
         }
