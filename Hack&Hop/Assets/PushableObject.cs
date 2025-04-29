@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PushableObject : MonoBehaviour
 {
     public float pushSpeed = 5f; // Örneğin 5 birim/sn
+    public int modeDirection = 1; //1 = left -1= right
     public bool IsMoving
     {
         get { return isMoving; }
@@ -46,7 +48,7 @@ void FixedUpdate()
 {
     if (IsMoving)
     {
-        rb.velocity = new Vector2(-pushSpeed, 0f);
+        rb.velocity = new Vector2(modeDirection*-pushSpeed, 0f);
     }
 }
 

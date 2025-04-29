@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3199741670981624660}
   - component: {fileID: 5188075867124131389}
   - component: {fileID: 7305027539219329388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PushableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -559060585
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushSpeed: 2
+  modeDirection: -1
 --- !u!50 &5188075867124131389
 Rigidbody2D:
   serializedVersion: 4
