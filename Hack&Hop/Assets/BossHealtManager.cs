@@ -28,10 +28,9 @@ private IEnumerator DelayedDeath()
     UnityEventList.instance.bossDeath.Invoke();
     
     yield return new WaitForSeconds(deathAnimLength*animconstant);
-    base.NPCDeath();
+
 }
 private void bossHealtMakeAgain(){
-    Debug.Log("okundu");
     setHP(maxHP);
 }
     public override void setHP(float value)

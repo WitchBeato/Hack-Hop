@@ -35,6 +35,9 @@ public class BossAnimationManager : MonoBehaviour
     {
                 animator.SetTrigger("Whip");
     }
+    public void killYourself(){
+        Destroy(gameObject);
+    }
     
     public void waitForAnimation(){
         StartCoroutine(MyDelayedFunction(giveLenght().Length));
