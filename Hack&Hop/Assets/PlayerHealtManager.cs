@@ -48,6 +48,7 @@ public class PlayerHealtManager : NPCHealtSystem
     public override void NPCDeath()
     {
         unityEventList.playerDeath.Invoke();
+        UnityEventList.instance.playerDeath.Invoke();
         SoundfxManager.instance.PlaySoundFX(deathFX,transform);
         UnityEventList.instance.loadGame.Invoke();
         base.NPCDeath();

@@ -18,4 +18,5 @@ public class UnityEventList : MonoBehaviour
     public UnityEvent playerSaveGame;
     public UnityEvent playerDeath;
     public UnityEvent loadGame;
+    public UnityEvent bossDeath;
 }
