@@ -1,12 +1,13 @@
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class WhipAttackManager : EnemyMissiveManager
 {
     public override void DestroyMe(Transform collisiontransform){
-        if(gameObject.transform.position.y>=collisiontransform.transform.position.y) return;
-        Debug.Log("yer:"+collisiontransform.transform.position.y);
-        Debug.Log("yer:"+collisiontransform.transform.position.y);
+        float realCollisionY = math.abs(collisiontransform.transform.position.y);
+        float realGameobjectY = math.abs(gameObject.transform.position.y);
+        if(realGameobjectY>=realCollisionY) return;
         Destroy(gameObject);
     }
 
