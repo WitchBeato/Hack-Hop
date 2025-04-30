@@ -25,6 +25,7 @@ private IEnumerator DelayedDeath()
     AnimatorClipInfo[] clipInfo = BossAnimationManager.instance.giveLenght();
     float deathAnimLength = clipInfo[0].clip.length;
     float animconstant = 1/3;
+    UnityEventList.instance.bossDeath.Invoke();
     
     yield return new WaitForSeconds(deathAnimLength*animconstant);
     base.NPCDeath();

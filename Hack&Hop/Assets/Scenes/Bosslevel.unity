@@ -61699,6 +61699,10 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 434879351}
+    - target: {fileID: 7375983421881918193, guid: 173205ca4c959824eba65e67fc93df8c, type: 3}
+      propertyPath: CurrentHP
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

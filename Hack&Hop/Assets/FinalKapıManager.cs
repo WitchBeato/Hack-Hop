@@ -15,4 +15,7 @@ public class FinalKapıManager : MonoBehaviour
                     Debug.Log("biri girdi");
         }
     }
+    public void loadScene(){
+        SceneManager.LoadScene(sceneName);
+    }
 }
