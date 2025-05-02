@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af44c9f0914a804e8f1ac06d8db64e7, type: 3}
   m_Name: BrokenPhone
   m_EditorClassIdentifier: 
+  ID: 0
   toolName: Phone
   sprite: {fileID: 21300000, guid: 04442916e37f31347bf9ac388c541695, type: 3}
-  toolExplanation: it damage your enemies
+  toolExplanation: it damage your enemies and send them out of world!

@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerItem 
 {
     public GameObject UseItem;
+    public GoodTools goodTools;
     public Boolean isAvaible = false;
 
 }

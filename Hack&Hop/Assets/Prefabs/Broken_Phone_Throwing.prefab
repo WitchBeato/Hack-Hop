@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4906468164852562176}
   - component: {fileID: 5184260314356584850}
   - component: {fileID: 8666821409234438335}
+  - component: {fileID: 3624049600174643703}
   m_Layer: 0
   m_Name: Broken_Phone_Throwing
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 41809499
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 60e649f5c45a80a46a437d10a3d9acc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,4 +172,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d413de853d7b4d64b87fa24c7141ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boomFX: {fileID: 8300000, guid: 9806a4015412b134c82dad3bc74ada75, type: 3}
   phoneBoom: {fileID: 1546473822892626600, guid: a938dab2fbbeb844482d9c4dd7c8ca7b, type: 3}
+--- !u!114 &3624049600174643703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404238567692988651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238aed9bf8cfc2e4592d60a1ef448973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

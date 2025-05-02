@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af44c9f0914a804e8f1ac06d8db64e7, type: 3}
   m_Name: HealtBalls
   m_EditorClassIdentifier: 
+  ID: 1
   toolName: HealtBar
   sprite: {fileID: 0}
   toolExplanation: it increase your healt!

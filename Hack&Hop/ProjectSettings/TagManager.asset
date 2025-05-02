@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Throwing
+  - AttackLocation
+  - EnemyThrowing
   layers:
   - Default
   - TransparentFX
@@ -12,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - enemy
+  - enemyThrow
   - 
   - 
   - 
@@ -42,15 +45,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 2513055295
+  - name: Object
+    uniqueID: 3735906711
     locked: 0
   - name: Ground
     uniqueID: 3474993253
     locked: 0
-  - name: Object
-    uniqueID: 3735906711
-    locked: 0
   - name: Player
     uniqueID: 41809499
+    locked: 0
+  - name: Background
+    uniqueID: 2513055295
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 3865196237
+    locked: 0
+  - name: foreground
+    uniqueID: 1010072565
     locked: 0

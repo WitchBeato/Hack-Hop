@@ -7,13 +7,25 @@ using UnityEngine;
 public class IsgroundChecker : MonoBehaviour
 {
 public UnityEventList unityEventList;
-public Boolean isGround {private set; get;}
-void OnCollisionEnter2D(Collision2D collision)
-{
-     isGround = true;
-     unityEventList.playerGrounded.Invoke();
-}
-void OnCollisionExit2D(){
-    isGround = false;
-}
+    public float controlDistance = 0.5f;
+    public bool isGround;
+    public LayerMask groundLyer;
+    private bool isFirstTime;
+
+    public void FixedUpdate()
+    {
+        if(Physics2D.Raycast(transform.position,Vector2.down,controlDistance,groundLyer)){
+            if(isFirstTime){
+                unityEventList.playerGrounded.Invoke();
+                isFirstTime = false;
+            }
+
+            isGround = true;
+        }
+        else{
+            isFirstTime = true;
+            isGround = false;
+        }
+
+    }
 }
